@@ -67,7 +67,7 @@ export class CheckSessionIFrame {
             this._session_state = session_state;
 
             let send = () => {
-                this._frame.contentWindow.postMessage(this._client_id + " " + this._session_state, this._frame_origin);
+                this._frame.contentWindow.postMessage(this._client_id + " " + this._session_state, '*');
             };
             
             // trigger now
